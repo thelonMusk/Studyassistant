@@ -1,99 +1,118 @@
-Study Assistant
+# Study Assistant
+
 An AI-powered study companion that helps you organize notes, generate summaries, and engage in intelligent conversations about your study materials.
-Features
 
-Note Management: Create, edit, and save study notes in an organized interface
-AI-Powered Summaries: Automatically generate concise summaries of your notes using Groq AI
-Interactive Q&A: Ask questions about your notes and get intelligent responses
-Conversation History: All your conversations with the AI are saved for future reference
-Persistent Storage: Your notes and conversations are stored locally in a database
+## Features
 
-Tech Stack
+- **Note Management**: Create, edit, and save study notes in an organized interface
+- **AI-Powered Summaries**: Automatically generate concise summaries of your notes using Groq AI
+- **Interactive Q&A**: Ask questions about your notes and get intelligent responses
+- **Conversation History**: All your conversations with the AI are saved for future reference
+- **Persistent Storage**: Your notes and conversations are stored locally in a database
 
-Backend: Python with Flask
-Frontend: [Your frontend framework - React/HTML/etc]
-AI: Groq API
-Database: SQLite
+## Tech Stack
 
-Installation
-Prerequisites
+- **Backend**: Python with Flask
+- **Frontend**: [Your frontend framework - React/HTML/etc]
+- **AI**: Groq API
+- **Database**: SQLite
 
-Python 3.8 or higher
-pip (Python package manager)
-A Groq API key [(Get one here)](https://console.groq.com/home)
+## Installation
 
-Setup
+### Prerequisites
 
-Clone the repository
+- Python 3.8 or higher
+- pip (Python package manager)
+- A Groq API key ([Get one here](https://console.groq.com))
 
-bash   git clone https://github.com/thelonMusk/Studyassistant.git
+### Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/thelonMusk/Studyassistant.git
    cd Studyassistant
+   ```
 
-Set up the backend
-
-bash   cd backend
+2. **Set up the backend**
+   ```bash
+   cd backend
    python -m venv .venv
+   ```
 
-Activate virtual environment
+3. **Activate virtual environment**
+   - Windows:
+     ```bash
+     .venv\Scripts\activate
+     ```
+   - Mac/Linux:
+     ```bash
+     source .venv/bin/activate
+     ```
 
-Windows:
+4. **Install dependencies**
+   ```bash
+   pip install flask groq python-dotenv flask-cors
+   ```
 
+5. **Configure environment variables**
+   
+   Create a `.env` file in the `backend` directory:
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
 
-
-bash     .venv\Scripts\activate
-
-Mac/Linux:
-
-bash     source .venv/bin/activate
-
-Install dependencies
-
-bash   pip install flask groq python-dotenv flask-cors
-
-Configure environment variables
-Create a .env file in the backend directory:
-
-env   GROQ_API_KEY=your_groq_api_key_here
-
-Set up the frontend
-
-bash   cd ../frontend
+6. **Set up the frontend**
+   ```bash
+   cd ../frontend
    # Install frontend dependencies (if applicable)
    npm install
-Usage
-Starting the Backend
+   ```
 
-Navigate to the backend directory
+## Usage
 
-bash   cd backend
+### Starting the Backend
 
-Activate the virtual environment (if not already activated)
+1. Navigate to the backend directory
+   ```bash
+   cd backend
+   ```
 
-bash   .venv\Scripts\activate  # Windows
+2. Activate the virtual environment (if not already activated)
+   ```bash
+   .venv\Scripts\activate  # Windows
    source .venv/bin/activate  # Mac/Linux
+   ```
 
-Run the Flask server
+3. Run the Flask server
+   ```bash
+   python app.py
+   ```
 
-bash   python app.py
-The backend will start on http://localhost:5000
-Starting the Frontend
+   The backend will start on `http://localhost:5000`
 
-Navigate to the frontend directory
+### Starting the Frontend
 
-bash   cd frontend
+1. Navigate to the frontend directory
+   ```bash
+   cd frontend
+   ```
 
-Start the frontend server
+2. Start the frontend server
+   ```bash
+   npm start  # or your frontend's start command
+   ```
 
-bash   npm start  # or your frontend's start command
-Using the Application
+### Using the Application
 
-Create Notes: Type your study notes in the text editor
-Save Notes: Click the save button to store your notes
-Generate Summaries: Use the AI summary feature to get concise overviews of your notes
-Ask Questions: Type questions about your study materials and get AI-powered answers
-Review History: Access your previous conversations and notes anytime
+1. **Create Notes**: Type your study notes in the text editor
+2. **Save Notes**: Click the save button to store your notes
+3. **Generate Summaries**: Use the AI summary feature to get concise overviews of your notes
+4. **Ask Questions**: Type questions about your study materials and get AI-powered answers
+5. **Review History**: Access your previous conversations and notes anytime
 
-Project Structure
+## Project Structure
+
+```
 Studyassistant/
 ├── backend/
 │   ├── app.py              # Flask application
@@ -103,24 +122,34 @@ Studyassistant/
 ├── instance/
 │   └── notes.db           # SQLite database
 └── README.md
-Environment Variables
-Create a .env file in the backend directory with the following:
-envGROQ_API_KEY=your_groq_api_key_here
-Important: Never commit your .env file to version control. It contains sensitive API keys.
-Security Note
+```
 
-The .env file is excluded from version control via .gitignore
-Always keep your API keys secure and never share them publicly
-Regenerate your API key if you suspect it has been exposed
+## Environment Variables
 
-Contributing
+Create a `.env` file in the `backend` directory with the following:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+**Important**: Never commit your `.env` file to version control. It contains sensitive API keys.
+
+## Security Note
+
+- The `.env` file is excluded from version control via `.gitignore`
+- Always keep your API keys secure and never share them publicly
+- Regenerate your API key if you suspect it has been exposed
+
+## Contributing
+
 Feel free to fork this project and submit pull requests for any improvements!
-License
-[Add your license here]
-Acknowledgments
 
-Powered by Groq AI
-Built with Flask and React
 
-Support
+## Acknowledgments
+
+- Powered by [Groq](https://groq.com) AI
+- Built with Flask and React
+
+## Support
+
 If you encounter any issues or have questions, please open an issue on GitHub.
