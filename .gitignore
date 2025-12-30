@@ -1,0 +1,17 @@
+```
+# Environment variables and API keys
+.env
+backend/.env
+*.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Database
+*.db
+instance/
+
+# IDE
+.vscode/
